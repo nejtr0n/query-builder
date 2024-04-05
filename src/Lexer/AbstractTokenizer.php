@@ -23,10 +23,11 @@ abstract class AbstractTokenizer
         if ($iterator->current() == TokenType::PATTERN->value) {
             $iterator->next();
 
-            $arg = array_shift($args);
-            if (is_null($arg)) {
+            if (empty($args)) {
                 throw new InvalidArgumentException("please provide argument to pattern");
             }
+
+            $arg = array_shift($args);
 
             if ($iterator->current() == TokenType::PATTERN_INT->value) {
                 $iterator->next();
