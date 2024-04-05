@@ -9,7 +9,7 @@ class NumberVisitor implements Visitor
     #[\Override]
     public function match(mixed $arg): bool
     {
-        return is_integer($arg) || is_bool($arg);
+        return is_integer($arg);
     }
 
     #[\Override]

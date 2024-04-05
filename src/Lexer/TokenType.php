@@ -19,7 +19,7 @@ enum TokenType : string
     case STRING = '';
     #[Visitor(PatternVisitor::class)]
     case PATTERN = '?';
-    #[Visitor(NumberVisitor::class, NullVisitor::class)]
+    #[Visitor(NumberVisitor::class, BoolVisitor::class, NullVisitor::class)]
     case PATTERN_INT = 'd';
     #[Visitor(FloatVisitor::class, NullVisitor::class)]
     case PATTERN_FLOAT = 'f';
